@@ -1,5 +1,5 @@
 import Login from "./components/Login";
-import Register from "./components/Login";
+import Register from "./components/Register";
 
 const routes = [
     {
