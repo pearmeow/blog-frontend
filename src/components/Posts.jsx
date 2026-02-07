@@ -42,8 +42,7 @@ function Posts() {
 
     return (
         <>
-            {pagePosts}
-            <Link to="/posts/new">New post</Link>
+            {pagePosts.length || <p>No posts yet...</p>}
             <Logout />
         </>
     );
