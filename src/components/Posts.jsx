@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { useNavigate } from "react-router";
 import PostCard from "./PostCard";
 import isAuthorized from "../auth.jsx";
 import Logout from "./Logout.jsx";
@@ -13,7 +13,13 @@ function Posts() {
                 navigate("/");
             }
             try {
-                const res = await fetch(import.meta.env.VITE_API + "posts");
+                const res = await fetch(import.meta.env.VITE_API + "posts", {
+                    method: "GET",
+                    headers: {
+                        Authorization:
+                            "Bearer " + localStorage.getItem("token"),
+                    },
+                });
                 if (!res.ok) {
                     console.log("joever");
                     return;
@@ -42,7 +48,7 @@ function Posts() {
 
     return (
         <>
-            {pagePosts.length || <p>No posts yet...</p>}
+            {pagePosts || <p>No posts yet...</p>}
             <Logout />
         </>
     );

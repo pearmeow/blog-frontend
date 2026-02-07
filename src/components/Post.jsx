@@ -25,6 +25,13 @@ function Post() {
             try {
                 const res = await fetch(
                     import.meta.env.VITE_API + "posts/" + postId,
+                    {
+                        method: "GET",
+                        headers: {
+                            Authorization:
+                                "Bearer " + localStorage.getItem("token"),
+                        },
+                    },
                 );
                 if (!res.ok) {
                     console.log(
@@ -62,7 +69,9 @@ function Post() {
                 },
             );
             if (!res.ok) {
-                console.log("joever");
+                console.log(
+                    "O you don't have the right! O you don't have the right!",
+                );
             } else {
                 let result = await res.json();
                 console.log(result);
