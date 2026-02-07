@@ -2,10 +2,11 @@ import Form from "./Form";
 import Input from "./Input";
 import Button from "./Button";
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 function Register() {
     const [errorMessage, setErrorMessage] = useState([]);
+    const nav = useNavigate();
     const handleRegister = async (event) => {
         event.preventDefault();
         const formData = new FormData(event.target);
@@ -26,6 +27,7 @@ function Register() {
             });
             if (res.ok) {
                 let result = await res.json();
+                nav("/");
                 console.log(result);
             } else {
                 let result = await res.json();
