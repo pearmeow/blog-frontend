@@ -1,4 +1,5 @@
 import Login from "./components/Login";
+import Register from "./components/Login";
 
 const routes = [
     {
@@ -6,8 +7,8 @@ const routes = [
         path: "/",
     },
     {
-        // Component: Register,
-        // path: "/register",
+        Component: Register,
+        path: "/register",
     },
     {
         // Component: Posts,

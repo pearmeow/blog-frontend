@@ -15,7 +15,7 @@ function Login() {
         const password = formData.get("password");
         try {
             const token = await fetch(
-                import.meta.env.VITE_API + "tokens/authors",
+                import.meta.env.VITE_API + "tokens/users",
                 {
                     method: "POST",
                     headers: {
