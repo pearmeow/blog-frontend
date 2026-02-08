@@ -36,18 +36,14 @@ function Posts() {
     if (posts) {
         posts.forEach((elem) => {
             pagePosts.push(
-                <PostCard
-                    key={elem.id}
-                    title={elem.title}
-                    text={elem.text}
-                    id={elem.id}
-                />,
+                <PostCard key={elem.id} title={elem.title} id={elem.id} />,
             );
         });
     }
 
     return (
         <>
+            <p>Posts</p>
             {pagePosts || <p>No posts yet...</p>}
             <Logout />
         </>

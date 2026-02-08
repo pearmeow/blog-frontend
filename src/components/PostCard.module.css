@@ -1,0 +1,21 @@
+.link {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.link:hover {
+    text-emphasis: 700;
+}
+
+.card {
+    border-radius: 3px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.button {
+    display: flex;
+    flex: 1;
+    cursor: pointer;
+}

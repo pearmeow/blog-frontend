@@ -1,14 +1,14 @@
+import styles from "./PostCard.module.css";
 import { Link } from "react-router";
-function PostCard({ title, text, id }) {
+
+function PostCard({ title, id }) {
     const link = "/posts/" + id;
     return (
-        <>
-            <p>Title: {title}</p>
-            <p>Body: {text}</p>
-            <p>
-                <Link to={link}>Go to post {id}</Link>
-            </p>
-        </>
+        <div className={styles.card}>
+            <Link to={link} className={styles.link}>
+                <button className={styles.button}>{title}</button>
+            </Link>
+        </div>
     );
 }
 
