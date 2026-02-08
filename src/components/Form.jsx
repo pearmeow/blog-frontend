@@ -1,7 +1,11 @@
+import styles from "./Form.module.css";
+
 function Form({ onSubmit, children }) {
     return (
         <>
-            <form onSubmit={onSubmit}>{children}</form>
+            <form onSubmit={onSubmit} className={styles.form}>
+                {children}
+            </form>
         </>
     );
 }
