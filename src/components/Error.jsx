@@ -1,8 +1,10 @@
+import styles from "./Error.module.css";
 import { Link } from "react-router";
 import isAuthorized from "../auth.jsx";
+
 function Error() {
     return (
-        <>
+        <p className={styles.err}>
             <p>This page doesn't exist!</p>
             <p>
                 {isAuthorized() ? (
@@ -11,7 +13,7 @@ function Error() {
                     <Link to="/">Back to login</Link>
                 )}
             </p>
-        </>
+        </p>
     );
 }
 
