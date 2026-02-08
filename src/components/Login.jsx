@@ -1,4 +1,5 @@
 import styles from "./Login.module.css";
+import gStyles from "./Globals.module.css";
 import Form from "./Form";
 import Input from "./Input";
 import Button from "./Button";
@@ -61,7 +62,7 @@ function Login() {
                 />
                 <Button type="submit" text="Log in" />
             </Form>
-            <Link to="/register" className={styles.fakeButton}>
+            <Link to="/register" className={gStyles.link}>
                 Register
             </Link>
         </div>
