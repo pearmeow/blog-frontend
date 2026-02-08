@@ -14,6 +14,7 @@ function Post() {
     const [post, setPost] = useState(null);
     const [update, forceUpdate] = useState(0);
     const decoded = jwtDecode(localStorage.getItem("token"));
+    const [errorMessage, setErrorMessage] = useState(null);
 
     let navigate = useNavigate();
     let params = useParams();
@@ -70,6 +71,9 @@ function Post() {
                 },
             );
             if (!res.ok) {
+                let result = await res.json();
+                console.log(result);
+                setErrorMessage(result);
                 console.log(
                     "O you don't have the right! O you don't have the right!",
                 );
@@ -92,6 +96,13 @@ function Post() {
                 <Logout />
             </>
         );
+    }
+
+    let errs = [];
+    if (errorMessage) {
+        for (const err of errorMessage) {
+            errs.push(err.msg);
+        }
     }
 
     let comments = [];
@@ -126,9 +137,9 @@ function Post() {
             {comments.length == 0 ? <p>No comments yet!</p> : <p>Comments</p>}
             {comments}
 
-            <p>New comment</p>
+            {errs}
             <Form onSubmit={handleNewComment}>
-                <Input type="text" labelName="Text" name="text" id={1} />
+                <Input type="text" labelName="New comment" name="text" id={1} />
                 <Button type="submit" text="Post comment" />
                 <Link to="/posts" className={styles.formLink}>
                     <Button text="Back to posts" className={styles.formLink} />
