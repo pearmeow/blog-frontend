@@ -44,13 +44,12 @@ function Comment({
 
     return (
         <>
-            <p>{author}: </p>
-            <p>{text}</p>
-            {authorId === userId && (
-                <Form onSubmit={handleDeleteComment}>
-                    <Button type="submit" text="Delete comment" />
-                </Form>
-            )}
+            <p>
+                {author}: {text + "  "}
+                {authorId === userId && (
+                    <button onClick={handleDeleteComment}>Delete</button>
+                )}
+            </p>
         </>
     );
 }
