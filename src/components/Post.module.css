@@ -1,0 +1,6 @@
+.formLink {
+    display: flex;
+    flex: 1;
+    text-decoration: none;
+    justify-content: center;
+}
