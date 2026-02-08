@@ -58,7 +58,7 @@ function Login() {
                     name="password"
                     id={2}
                 />
-                <Button type="submit" text="Submit" />
+                <Button type="submit" text="Log in" />
             </Form>
             <Link to="/register">Register</Link>
         </>
