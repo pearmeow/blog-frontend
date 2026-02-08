@@ -44,7 +44,10 @@ function Login() {
     };
     return (
         <div className={styles.loginPage}>
-            <p className={styles.login}>Login</p>
+            <p className={styles.login}>Welcome to Pear's Blog!</p>
+            <p className={styles.info}>
+                Log in or make an account to continue...
+            </p>
             {errorMessage}
             <Form onSubmit={handleLogin}>
                 <Input

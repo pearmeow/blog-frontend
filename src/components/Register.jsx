@@ -3,6 +3,7 @@ import Input from "./Input";
 import Button from "./Button";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router";
+import styles from "./Register.module.css";
 
 function Register() {
     const [errorMessage, setErrorMessage] = useState([]);
@@ -45,8 +46,8 @@ function Register() {
         }
     };
     return (
-        <>
-            <p>Register</p>
+        <div className={styles.register}>
+            <p className={styles.title}>Register</p>
             {errorMessage}
             <Form onSubmit={handleRegister}>
                 <Input
@@ -69,8 +70,10 @@ function Register() {
                 />
                 <Button type="submit" text="Submit" />
             </Form>
-            <Link to="/">Back to login</Link>
-        </>
+            <Link to="/">
+                <Button text="Back to login" />
+            </Link>
+        </div>
     );
 }
 

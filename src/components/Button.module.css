@@ -5,7 +5,7 @@ button {
     padding: 5px 10px;
     color: white;
     cursor: pointer;
-    min-width: 100px;
+    min-width: 200px;
     font-family: sans-serif;
     font-size: 1rem;
 }
