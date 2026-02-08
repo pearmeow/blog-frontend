@@ -61,8 +61,8 @@ function Login() {
                 />
                 <Button type="submit" text="Log in" />
             </Form>
-            <Link to="/register" className="fakeButton">
-                Register
+            <Link to="/register">
+                <Button text="Register" />
             </Link>
         </div>
     );
