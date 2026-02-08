@@ -1,3 +1,4 @@
+import styles from "./Login.module.css";
 import Form from "./Form";
 import Input from "./Input";
 import Button from "./Button";
@@ -42,8 +43,8 @@ function Login() {
         }
     };
     return (
-        <>
-            <p>Login</p>
+        <div className={styles.loginPage}>
+            <p className={styles.login}>Login</p>
             <p>{errorMessage}</p>
             <Form onSubmit={handleLogin}>
                 <Input
@@ -60,8 +61,10 @@ function Login() {
                 />
                 <Button type="submit" text="Log in" />
             </Form>
-            <Link to="/register">Register</Link>
-        </>
+            <Link to="/register" className={styles.fakeButton}>
+                Register
+            </Link>
+        </div>
     );
 }
 
