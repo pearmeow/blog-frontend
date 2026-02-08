@@ -1,3 +1,7 @@
-label {
+.label {
     display: block;
+}
+
+.container {
+    margin: 0;
 }
