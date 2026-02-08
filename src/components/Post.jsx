@@ -111,10 +111,18 @@ function Post() {
         );
     }
 
+    let articleText = post.text.split("\n");
+    let paragraphs = [];
+    let order = 0;
+    for (const para of articleText) {
+        paragraphs.push(<p key={order}>{para}</p>);
+        ++order;
+    }
+
     return (
-        <>
+        <div className={styles.article}>
             <p>{post.title}</p>
-            <p>{post.text}</p>
+            {paragraphs}
             {comments.length == 0 ? <p>No comments yet!</p> : <p>Comments</p>}
             {comments}
 
@@ -127,7 +135,7 @@ function Post() {
                 </Link>
             </Form>
             <Logout className={styles.formLink} />
-        </>
+        </div>
     );
 }
 
