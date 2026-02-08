@@ -1,3 +1,5 @@
+import "./Button.module.css";
+
 function Button({ type, text }) {
     return (
         <>

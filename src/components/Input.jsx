@@ -1,3 +1,5 @@
+import "./Input.module.css";
+
 function Input({ type, labelName, name, id, defaultValue, defaultChecked }) {
     return (
         <>
