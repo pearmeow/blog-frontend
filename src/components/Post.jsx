@@ -8,6 +8,7 @@ import Form from "./Form.jsx";
 import Input from "./Input.jsx";
 import Button from "./Button.jsx";
 import { jwtDecode } from "jwt-decode";
+import styles from "./Post.module.css";
 
 function Post() {
     const [post, setPost] = useState(null);
@@ -121,11 +122,11 @@ function Post() {
             <Form onSubmit={handleNewComment}>
                 <Input type="text" labelName="Text" name="text" id={1} />
                 <Button type="submit" text="Post comment" />
+                <Link to="/posts" className={styles.formLink}>
+                    <Button text="Back to posts" className={styles.formLink} />
+                </Link>
             </Form>
-            <Logout />
-            <p>
-                <Link to="/posts">Back to posts</Link>
-            </p>
+            <Logout className={styles.formLink} />
         </>
     );
 }
