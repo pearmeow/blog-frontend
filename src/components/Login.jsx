@@ -62,11 +62,15 @@ function Login() {
                     name="password"
                     id={2}
                 />
-                <Button type="submit" text="Log in" />
+                <Button
+                    type="submit"
+                    text="Log in"
+                    className={styles.formLink}
+                />
+                <Link to="/register" className={styles.formLink}>
+                    <Button text="Register" className={styles.formLink} />
+                </Link>
             </Form>
-            <Link to="/register">
-                <Button text="Register" />
-            </Link>
         </div>
     );
 }

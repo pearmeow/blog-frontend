@@ -68,11 +68,15 @@ function Register() {
                     name="confirm"
                     id={3}
                 />
-                <Button type="submit" text="Submit" />
+                <Button
+                    type="submit"
+                    text="Submit"
+                    className={styles.formLink}
+                />
+                <Link to="/" className={styles.formLink}>
+                    <Button text="Back to login" className={styles.formLink} />
+                </Link>
             </Form>
-            <Link to="/">
-                <Button text="Back to login" />
-            </Link>
         </div>
     );
 }

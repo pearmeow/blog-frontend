@@ -1,9 +1,11 @@
 import "./Button.module.css";
 
-function Button({ type, text }) {
+function Button({ type, text, className }) {
     return (
         <>
-            <button type={type}>{text}</button>
+            <button type={type} className={className}>
+                {text}
+            </button>
         </>
     );
 }
