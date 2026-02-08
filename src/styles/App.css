@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+.fakeButton {
+    text-decoration: none;
+    background-color: #4262FF;
+    color: white;
+    padding: 5px 10px;
+    border-color: #4262FF;
+    border-radius: 3px;
+    min-width: 100px;
+    text-align: center;
+}

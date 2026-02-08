@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .link {
     text-decoration: none;
     background-color: #4262FF;
@@ -5,4 +9,6 @@
     padding: 5px 10px;
     border-color: #4262FF;
     border-radius: 3px;
+    min-width: 100px;
+    text-align: center;
 }

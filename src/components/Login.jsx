@@ -1,5 +1,4 @@
 import styles from "./Login.module.css";
-import gStyles from "./Globals.module.css";
 import Form from "./Form";
 import Input from "./Input";
 import Button from "./Button";
@@ -46,7 +45,7 @@ function Login() {
     return (
         <div className={styles.loginPage}>
             <p className={styles.login}>Login</p>
-            <p>{errorMessage}</p>
+            {errorMessage}
             <Form onSubmit={handleLogin}>
                 <Input
                     type="text"
@@ -62,7 +61,7 @@ function Login() {
                 />
                 <Button type="submit" text="Log in" />
             </Form>
-            <Link to="/register" className={gStyles.link}>
+            <Link to="/register" className="fakeButton">
                 Register
             </Link>
         </div>
