@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import PostCard from "./PostCard";
 import isAuthorized from "../auth.jsx";
 import Logout from "./Logout.jsx";
+import styles from "./Posts.module.css";
 
 function Posts() {
     const [posts, setPosts] = useState(null);
@@ -42,11 +43,11 @@ function Posts() {
     }
 
     return (
-        <>
-            <p>Posts</p>
+        <div className={styles.posts}>
+            <p className={styles.title}>Posts</p>
             {pagePosts || <p>No posts yet...</p>}
             <Logout />
-        </>
+        </div>
     );
 }
 
