@@ -89,11 +89,19 @@ function Post() {
     };
 
     if (!post) {
+        // form is just for formatting lol
         return (
             <>
                 <p>This post doesn't exist!</p>
-                <Link to="/posts">Back to posts</Link>
-                <Logout />
+                <Form>
+                    <Link to="/posts" className={styles.formLink}>
+                        <Button
+                            text="Back to posts"
+                            className={styles.formLink}
+                        />
+                    </Link>
+                    <Logout className={styles.formLink} />
+                </Form>
             </>
         );
     }
@@ -144,8 +152,8 @@ function Post() {
                 <Link to="/posts" className={styles.formLink}>
                     <Button text="Back to posts" className={styles.formLink} />
                 </Link>
+                <Logout className={styles.formLink} />
             </Form>
-            <Logout className={styles.formLink} />
         </div>
     );
 }

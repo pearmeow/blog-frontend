@@ -23,3 +23,7 @@
     text-decoration: none;
     justify-content: center;
 }
+
+.container {
+    width: 100%;
+}
