@@ -55,18 +55,25 @@ function Register() {
                     labelName="Username"
                     name="username"
                     id={1}
+                    required={true}
                 />
                 <Input
                     type="password"
                     labelName="Password"
                     name="password"
                     id={2}
+                    required={true}
+                    minLen={8}
+                    maxLen={32}
                 />
                 <Input
                     type="password"
                     labelName="Confirm Password"
                     name="confirm"
                     id={3}
+                    required={true}
+                    minLen={8}
+                    maxLen={32}
                 />
                 <Button
                     type="submit"

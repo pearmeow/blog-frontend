@@ -1,11 +1,21 @@
 import styles from "./Input.module.css";
 
-function Input({ type, labelName, name, id, defaultValue, defaultChecked }) {
+function Input({
+    type,
+    labelName,
+    name,
+    id,
+    defaultValue,
+    defaultChecked,
+    required,
+    minLen,
+    maxLen,
+}) {
     return (
         <>
             <p className={styles.container}>
                 <label htmlFor={id} className={styles.label}>
-                    {labelName}{" "}
+                    {labelName}
                 </label>
                 <input
                     id={id}
@@ -13,6 +23,9 @@ function Input({ type, labelName, name, id, defaultValue, defaultChecked }) {
                     name={name}
                     defaultValue={defaultValue}
                     defaultChecked={defaultChecked}
+                    required={required}
+                    minLength={minLen}
+                    maxLength={maxLen}
                 />
             </p>
         </>
