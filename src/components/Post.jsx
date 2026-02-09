@@ -147,7 +147,10 @@ function Post() {
 
             {errs}
             <Form onSubmit={handleNewComment}>
-                <Input type="text" labelName="New comment" name="text" id={1} />
+                <p className={styles.newComment}>
+                    <label htmlFor="text">New comment</label>
+                    <textarea name="text" id="1" maxLength={500}></textarea>
+                </p>
                 <Button type="submit" text="Post comment" />
                 <Link to="/posts" className={styles.formLink}>
                     <Button text="Back to posts" className={styles.formLink} />

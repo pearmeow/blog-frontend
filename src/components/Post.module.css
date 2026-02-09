@@ -8,3 +8,14 @@
 .article {
     max-width: 80vw;
 }
+
+.newComment {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.newComment>textarea {
+    height: 7rem;
+    resize: vertical;
+}
