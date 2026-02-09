@@ -5,10 +5,10 @@ import { useParams } from "react-router";
 import Comment from "./Comment.jsx";
 import Logout from "./Logout.jsx";
 import Form from "./Form.jsx";
-import Input from "./Input.jsx";
 import Button from "./Button.jsx";
 import { jwtDecode } from "jwt-decode";
 import styles from "./Post.module.css";
+import { format } from "date-fns";
 
 function Post() {
     const [post, setPost] = useState(null);
@@ -140,7 +140,10 @@ function Post() {
 
     return (
         <div className={styles.article}>
-            <p>{post.title}</p>
+            <h1 className={styles.title}>
+                {post.title} by {post.author.username}
+            </h1>
+            <p>Posted on {format(post.date, "PP, p")}</p>
             {paragraphs}
             {comments.length == 0 ? <p>No comments yet!</p> : <p>Comments</p>}
             {comments}
@@ -149,7 +152,12 @@ function Post() {
             <Form onSubmit={handleNewComment}>
                 <p className={styles.newComment}>
                     <label htmlFor="text">New comment</label>
-                    <textarea name="text" id="1" maxLength={500}></textarea>
+                    <textarea
+                        name="text"
+                        id="1"
+                        maxLength={500}
+                        required
+                    ></textarea>
                 </p>
                 <Button type="submit" text="Post comment" />
                 <Link to="/posts" className={styles.formLink}>
