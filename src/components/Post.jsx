@@ -42,7 +42,7 @@ function Post() {
                     return;
                 }
                 const data = await res.json();
-                console.log(data);
+                // console.log(data);
                 setPost(data);
             } catch (err) {
                 console.log(err);
@@ -72,14 +72,12 @@ function Post() {
             );
             if (!res.ok) {
                 let result = await res.json();
-                console.log(result);
+                // console.log(result);
                 setErrorMessage(result);
                 console.log(
                     "O you don't have the right! O you don't have the right!",
                 );
             } else {
-                let result = await res.json();
-                console.log(result);
                 forceUpdate(update + 1);
             }
         } catch (err) {

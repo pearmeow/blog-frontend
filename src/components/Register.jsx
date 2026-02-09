@@ -27,12 +27,9 @@ function Register() {
                 }),
             });
             if (res.ok) {
-                let result = await res.json();
                 nav("/");
-                console.log(result);
             } else {
                 let result = await res.json();
-                console.log(result);
                 let errs = [];
                 for (const elem of result) {
                     errs.push(<p>{elem.msg}</p>);

@@ -30,10 +30,10 @@ function Comment({
                 },
             );
             if (!res.ok) {
-                console.log("handleDeleteComment fetched with error");
+                console.log(
+                    "O you don't have the right. O you don't have the right!",
+                );
             } else {
-                let result = await res.json();
-                console.log(result);
                 forceUpdate(update + 1);
             }
         } catch (err) {

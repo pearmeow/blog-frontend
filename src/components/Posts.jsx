@@ -22,11 +22,9 @@ function Posts() {
                     },
                 });
                 if (!res.ok) {
-                    console.log("joever");
                     return;
                 }
                 const data = await res.json();
-                console.log(data);
                 setPosts(data);
             } catch (err) {
                 console.log(err);
