@@ -1,22 +1,22 @@
-React Project Template
-----------------------
+Blog Frontend
+-------------
 
-React Project Template
+The frontend of Pear's Blog. Made with [React](https://react.dev).
 
 Features
 --------
 
-- [ ] Wow, feature?
-- [ ] A really good feature
-- [ ] Good styling
+- [x] Lightly styled articles, forms, and text
+- [x] Single page application
+- [x] Hits a backend and gets the information from there
+- [x] Accounts and commenting on articles
 
 How to use this project
 -----------------------
 
-Visit the live link [here]()! Or clone the repo and run `npm install` and `npm run dev`.
+Visit the live link [here](https://pearmeow-blog-frontend.netlify.app/)!
 
 Credits
 -------
 
-Me, me, me!  
-[Or maybe someone else?]()
+All me (and documentation).
